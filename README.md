@@ -8,7 +8,7 @@ just take a look for yourself in .help
 sinfo = server info                                                                                                                                        
 uinfo = user info                                                    
 getip = get ip with name website example: .getip www.dpr.go.id                                                                            
-iptrack = track ip examlpe: .iptrack 114.124.227.66                                                                                         
+iptrack = track ip example: .iptrack 114.124.227.66                                                                                         
 
 
 
