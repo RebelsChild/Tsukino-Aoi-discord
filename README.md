@@ -3,7 +3,13 @@ discord bot using python
 
 
 feature list:                                                                                                                                                           
-just take a look for yourself in .help
+just take a look for yourself in .help                                                                                            
+                            
+sinfo = server info                                                                                                                                        
+uinfo = user info                                                    
+getip = get ip with name website example: .getip www.dpr.go.id                                                                            
+iptrack = track ip examlpe: .iptrack 114.124.227.66                                                                                         
+
 
 
 # screenshot .help                                                                                                                                                                                                
