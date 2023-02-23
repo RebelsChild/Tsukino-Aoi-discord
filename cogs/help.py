@@ -17,7 +17,7 @@ class help(commands.Cog):
         em.add_field(name="Moderator", value="Kick, Ban, clear, unban")
         em.add_field(name="Fun", value="eightball, suwit, profile, say")
         em.add_field(name="Anime", value="waifu, maid, uniform, baal, neko, kitsune")
-        em.add_field(name="Other", value="sinfo, getip, iptrack, uinfo, dm")
+        em.add_field(name="Other", value="sinfo, getip, iptrack, uinfo, dm, schara, sanime")
         em.set_footer(text=f"{ctx.author.display_name} requests this embed")
         await ctx.send(embed=em)
 
