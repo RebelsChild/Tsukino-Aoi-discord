@@ -7,7 +7,7 @@ class tambahan(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def cuaca(self, ctx, city_name):
+    async def weather(self, ctx, city_name):
         api_token = "your token"
         
         req = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_token}")
