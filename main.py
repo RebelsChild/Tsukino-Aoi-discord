@@ -2,6 +2,9 @@ import discord
 from discord.ext import commands
 import os
 import asyncio
+from dotenv import load_dotenv
+
+load_dotenv()
 
 intents = discord.Intents.all()
 intents.message_content = True
@@ -14,6 +17,9 @@ bot.remove_command("help")
 async def on_ready():
     await bot.change_presence(status=discord.Status.idle, activity=discord.Game("prefix | .help"))
     print(f"Bot is Online {bot.user.name}")
+    # the code below to send a message to the channel when the bot is activated
+    # channel = bot.get_channel(id channel)
+    # await channel.send("dadah... hehe :kissing_heart:")
 
 @bot.event
 async def on_member_join(member: discord.Member):
@@ -35,6 +41,6 @@ async def load():
 async def main():
     async with bot:
         await load()
-        await bot.start("Your Token Bot")
+        await bot.start(os.getenv("TOKEN_BOT"))
 
 asyncio.run(main())
