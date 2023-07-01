@@ -5,19 +5,25 @@ class moderator(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(member:discord.Member=None)
     async def kick(self, ctx, member:discord.Member, *, reason=None):
         await member.kick(reason=reason)
         await ctx.send(f"{member} successfully kicked")
-        dm = await member.create_dm()
-        await dm.send(f"you are kicked from {ctx.guild.name} server with reason {reason}")
+        if member.bot == True:
+            pass
+        elif member.bot == False:
+            dm = await member.create_dm()
+            await dm.send(f"you are kicked from {ctx.guild.name} server with reason {reason}")
 
-    @commands.command()
+    @commands.command(member:discord.Member=None)
     async def ban(self, ctx, member:discord.Member, *, reason=None):
         await member.ban(reason=reason)
         await ctx.send(f"{member} successfully baned")
-        dm = await member.create_dm()
-        await dm.send(f"you are banned from {ctx.guild.name} server with reason {reason}")
+        if member.bot == True:
+            pass
+        elif member.bot == False:
+            dm = await member.create_dm()
+            await dm.send(f"you are banned from {ctx.guild.name} server with reason {reason}")
 
     @commands.command()
     async def unban(self, ctx, *, member):
