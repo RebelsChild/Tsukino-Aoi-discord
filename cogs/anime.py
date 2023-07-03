@@ -103,20 +103,17 @@ class anime(commands.Cog):
         await ctx.send(embed=em)
 
     @commands.command()
-    async def schara(self, ctx, *, chara, count):
+    async def schara(self, ctx, *, chara):
         req = requests.get(f"https://api.jikan.moe/v4/characters?q={chara}")
         res = req.json()
 
-        if count == None:
-            count = 0
-
         em = discord.Embed(
-            title= res["data"][count]["name"],
-            description= res["data"][count]["about"],
+            title= res["data"][0]["name"],
+            description= res["data"][]["about"],
             colour=discord.Colour.random(),
             timestamp=ctx.message.created_at
         )
-        em.set_image(url=res["data"][count]["images"]["jpg"]["image_url"])
+        em.set_image(url=res["data"][0]["images"]["jpg"]["image_url"])
         em.set_footer(text=f"{ctx.author.display_name} has requests this embed")
         await ctx.send(embed=em)
 
