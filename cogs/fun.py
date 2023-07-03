@@ -42,7 +42,7 @@ class fun(commands.Cog):
     
         if input == "scissors":
             if Aoi == "paper":
-                await ctx.send(f"{ctx.author.dislpay_name} win")
+                await ctx.send(f"{ctx.author.display_name} win")
             elif Aoi == "rock":
                 await ctx.send("Bot win")
 
