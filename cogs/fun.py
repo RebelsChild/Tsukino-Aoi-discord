@@ -40,7 +40,7 @@ class fun(commands.Cog):
         if input == Aoi:
             await ctx.send("no win, try again")
     
-        if input == "scissord":
+        if input == "scissors":
             if Aoi == "paper":
                 await ctx.send(f"{ctx.author.dislpay_name} win")
             elif Aoi == "rock":
