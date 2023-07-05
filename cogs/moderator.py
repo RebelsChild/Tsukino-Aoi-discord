@@ -13,7 +13,7 @@ class moderator(commands.Cog):
             pass
         elif member.bot == False:
             dm = await member.create_dm()
-            await dm.send(f"you are kicked from {ctx.guild.name} server with reason {reason}")
+            await dm.send(f"you has been kicked from {ctx.guild.name} server with reason {reason}")
 
     @commands.command(member:discord.Member=None)
     async def ban(self, ctx, member:discord.Member, *, reason=None):
@@ -23,7 +23,7 @@ class moderator(commands.Cog):
             pass
         elif member.bot == False:
             dm = await member.create_dm()
-            await dm.send(f"you are banned from {ctx.guild.name} server with reason {reason}")
+            await dm.send(f"you has been banned from {ctx.guild.name} server with reason {reason}")
 
     @commands.command()
     async def unban(self, ctx, *, member):
