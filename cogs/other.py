@@ -1,5 +1,6 @@
 import discord 
 from discord.ext import commands
+from translate import Translator
 import socket, requests, json
 
 class other(commands.Cog):
@@ -89,6 +90,12 @@ class other(commands.Cog):
     async def dm(self, ctx, member:discord.Member, *, teks):
         dm = await member.create_dm()
         await dm.send(f"""you get messages from {ctx.author}
+
+    @commands.command()
+    async def translate(self, ctx, to_lang="EN", from_lang, *, text):
+        tranlator = Translator(to_lang, from_lang)
+        translate = translator.translate(text)
+        await ctx.send(translate)
 
 message content 
 {teks}
